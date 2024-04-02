@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-background: hsl(218, 28%, 13%);
+  --email-sign-up: hsl(217, 28%, 15%);
+  --footer-background: hsl(216, 53%, 9%);
+  --testimonials-background: hsl(219, 30%, 18%);
+  --cyan-call-to-action: hsl(176, 68%, 64%);
+  --blue-call-to-action: hsl(198, 60%, 50%);
+  --light-red: hsl(0, 100%, 63%);
+  --raleway: "Raleway", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--main-background);
+  color: #fff;
+  font-family: var(--open-sans);
+}
+
+nav,
+main {
+  max-width: 1440px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+nav,
+ul,
+.hero,
+.hero-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero,
+.hero-text {
+  flex-direction: column;
+}
+h1 {
+  font-family: var(--raleway);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 4rem;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 18px;
+}
+
+nav {
+  align-items: center;
+  padding: 2rem;
+}
+
+ul {
+  gap: 4rem;
+}
+
+.hero {
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero-text {
+  width: 50%;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-text button {
+  width: 250px;
+  padding: 1rem;
+  color: #fff;
+  background: rgb(49, 211, 92);
+  background: linear-gradient(
+    343deg,
+    rgba(49, 211, 92, 0.6741290266106443) 0%,
+    rgba(43, 183, 218, 1) 61%
+  );
+  border: none;
+  border-radius: 2rem;
+}
