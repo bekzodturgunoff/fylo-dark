@@ -17,7 +17,7 @@
 
 body {
   background-color: var(--main-background);
-  color: #fff;
+  color: #ffffffdb;
   font-family: var(--open-sans);
 }
 
@@ -39,19 +39,26 @@ li {
 nav,
 ul,
 .hero,
-.hero-text {
+.hero-text,
+.four-block,
+.block,
+.productive-container,
+.productive-text,
+span {
   display: flex;
   justify-content: space-between;
 }
 
 .hero,
-.hero-text {
+.hero-text,
+.block,
+.productive-text {
   flex-direction: column;
 }
 h1 {
   font-family: var(--raleway);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 4rem;
 }
 
@@ -93,4 +100,56 @@ ul {
   );
   border: none;
   border-radius: 2rem;
+}
+
+.four-block {
+  gap: 2rem;
+  align-items: center;
+}
+
+.block img {
+  width: 80px;
+}
+
+.block {
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.block p {
+  width: 70%;
+  font-size: 16px;
+}
+
+.block h2 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.productive-container {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.productive-text {
+  width: 43%;
+  gap: 1rem;
+}
+
+.productive-text h1 {
+  width: 60%;
+}
+.productive-text a {
+  color: var(--cyan-call-to-action);
+}
+
+span {
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var(--cyan-call-to-action);
+  gap: 5px;
+  width: fit-content;
+  padding: 3px;
 }
