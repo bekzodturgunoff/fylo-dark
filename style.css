@@ -44,7 +44,10 @@ ul,
 .block,
 .productive-container,
 .productive-text,
-span {
+span,
+.commentary-container,
+.commentary,
+.commentary-author {
   display: flex;
   justify-content: space-between;
 }
@@ -52,7 +55,8 @@ span {
 .hero,
 .hero-text,
 .block,
-.productive-text {
+.productive-text,
+.commentary {
   flex-direction: column;
 }
 h1 {
@@ -152,4 +156,43 @@ span {
   gap: 5px;
   width: fit-content;
   padding: 3px;
+}
+
+.commentary-container {
+  gap: 2rem;
+  position: relative;
+}
+
+.commentary {
+  background-color: var(--email-sign-up);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  gap: 1.3rem;
+}
+
+.commentary-author {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.commentary-author h3 {
+  font-size: 14px;
+}
+
+.commentary-author p {
+  font-size: 12px;
+}
+.commentary-author img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.quote-img {
+  position: absolute;
+  z-index: -1;
+  top: -1.5rem;
 }
