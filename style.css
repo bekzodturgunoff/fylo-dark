@@ -29,6 +29,11 @@ main {
 
 a {
   text-decoration: none;
+  color: #ffffffcc;
+}
+
+a:hover {
+  text-decoration: underline;
   color: #fff;
 }
 
@@ -47,7 +52,9 @@ ul,
 span,
 .commentary-container,
 .commentary,
-.commentary-author {
+.commentary-author,
+.email-sign-up-container,
+.email-form-container {
   display: flex;
   justify-content: space-between;
 }
@@ -56,7 +63,8 @@ span,
 .hero-text,
 .block,
 .productive-text,
-.commentary {
+.commentary,
+.email-sign-up-container {
   flex-direction: column;
 }
 h1 {
@@ -92,7 +100,8 @@ ul {
   align-items: center;
 }
 
-.hero-text button {
+.hero-text button,
+.email-form-container button {
   width: 250px;
   padding: 1rem;
   color: #fff;
@@ -104,11 +113,28 @@ ul {
   );
   border: none;
   border-radius: 2rem;
+  transition: transform 100ms ease-out;
+}
+.hero-text button:active,
+.email-form-container button:active {
+  transform: scale(0.9);
+}
+
+.hero-text button:hover,
+.email-form-container button:hover {
+  background: rgb(49, 211, 92);
+  background: linear-gradient(
+    343deg,
+    rgba(124, 211, 147, 0.674) 0%,
+    rgb(113, 194, 214) 61%
+  );
 }
 
 .four-block {
   gap: 2rem;
   align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .block img {
@@ -149,6 +175,10 @@ ul {
   color: var(--cyan-call-to-action);
 }
 
+.productive-text a:hover {
+  text-decoration: none;
+}
+
 span {
   justify-content: flex-start;
   align-items: center;
@@ -161,10 +191,12 @@ span {
 .commentary-container {
   gap: 2rem;
   position: relative;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .commentary {
-  background-color: var(--email-sign-up);
+  background-color: var(--testimonials-background);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   padding: 1.5rem;
   padding-top: 2.5rem;
@@ -195,4 +227,38 @@ span {
   position: absolute;
   z-index: -1;
   top: -1.5rem;
+}
+
+.email-sign-up-container {
+  position: absolute;
+  background-color: var(--email-sign-up);
+  width: 60rem;
+  top: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.email-sign-up-container p {
+  font-size: 16px;
+}
+
+.email-form-container {
+  justify-content: center;
+  gap: 2rem;
+}
+
+.email-form-container input {
+  width: 350px;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-indent: 10px;
+}
+
+.email-form-container input::placeholder {
+  color: #88888894;
 }
