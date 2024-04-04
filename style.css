@@ -293,9 +293,6 @@ footer {
   gap: 0.5rem;
 }
 
-.footer-contact ul {
-}
-
 .footer-links ul {
   justify-content: flex-start;
   gap: 1rem;
